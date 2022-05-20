@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp();
-}
+void main() => runApp(const MaterialApp(
+  home: Text('Surajit'),
+));
