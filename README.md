@@ -24,3 +24,14 @@ Is gonna help us to create a basic layout for our application, it's gonna allow 
     A button displayed floating above [body], in the bottom right corner.
 
 
+## Custom Styling 
+- For adding custom colors to our layouts, we are using `Colors` object to acess the MaterialTheme color palate as Props, e.g. backgroundColor: Colors.red[400],
+- Text() can style any text by adding `style` prop in Text() Widget after the string. Like this :   
+        Text(
+         'Hello folks!',
+          style: TextStyle(
+          fontSize: 30.0,
+          fontWeight: FontWeight.bold,
+          letterSpacing: 2.0,
+          color: Colors.grey[600],
+        ),
