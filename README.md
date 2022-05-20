@@ -35,3 +35,5 @@ Is gonna help us to create a basic layout for our application, it's gonna allow 
           letterSpacing: 2.0,
           color: Colors.grey[600],
         ),
+
+- Adding Custom Fonts: Download Font -> Move the all `.ttf` file inside a file in root dir of the project -> adding those configuration `pubspec.yml` file -> use 

@@ -4,7 +4,7 @@ void main() => runApp(MaterialApp(
   home: Scaffold(
     appBar: AppBar(
       title:  const Text(
-        'Surajits\'s App',
+        'Surajit\'s App',
         ),
       centerTitle: true,
       backgroundColor: Colors.red[600],
@@ -13,10 +13,11 @@ void main() => runApp(MaterialApp(
        child: Text(
          'Hello folks!',
           style: TextStyle(
-          fontSize: 30.0,
+          fontSize: 50.0,
           fontWeight: FontWeight.bold,
           letterSpacing: 2.0,
           color: Colors.grey[600],
+          fontFamily: 'Prompt',
         ),
        )
     ),
