@@ -5,6 +5,10 @@ Everything is basically a Widget in flutter and Widgets are basically Classes. T
 - Every properteis should separate with a comma (very essential).
 - We can't just nested any value inside a Widget directly, had do with child properteis, i.e. Center( child: Text('centerd text), )
 
+# Stateless vs. Stateful
+- Stateless Widgets: the state of the widget `cannot change` over time. 
+- Stateful Widgets: the state of the widget `can change` over time.
+
 
 ## MaterialApp() Widget
 Is just a wrapper class, which provides a basic styling.
@@ -37,3 +41,7 @@ Is gonna help us to create a basic layout for our application, it's gonna allow 
         ),
 
 - Adding Custom Fonts: Download Font -> Move the all `.ttf` file inside a file in root dir of the project -> adding those configuration `pubspec.yml` file -> use 
+
+
+
+> Hot Reload doesn't working with Auto Save option.
