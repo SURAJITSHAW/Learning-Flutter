@@ -3,12 +3,14 @@ Everything is basically a Widget in flutter and Widgets are basically Classes. T
 
 -Every Widget starts with a capital letter, and every individual word in it.
 -Every properteis should separate with a comma (very essential).
+-We can't just nested any value inside a Widget directly, had do with child properteis, i.e. Center( child: Text('centerd text), )
 
 
 ##MaterialApp() Widget
 Is just a wrapper class, which provides a basic styling.
 
 ##Scaffold() Widget
+It's basically a Wrapper class which contains imp Layout Widgets.
 Is gonna help us to create a basic layout for our application, it's gonna allow us to set up a AppBar(), FloatingActionButton() and many more. 
 
     #PreferredSizeWidget? appBar
