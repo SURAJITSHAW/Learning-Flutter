@@ -19,17 +19,8 @@ class Home extends StatelessWidget {
       centerTitle: true,
       backgroundColor: Colors.red[600],
     ),
-    body: Center(
-       child: Text(
-         'Hello folks!',
-          style: TextStyle(
-          fontSize: 50.0,
-          fontWeight: FontWeight.bold,
-          letterSpacing: 2.0,
-          color: Colors.grey[600],
-          fontFamily: 'Prompt',
-        ),
-       )
+    body: const Center(
+      child: Image(image: NetworkImage('https://www.nasa.gov/sites/default/files/thumbnails/image/curiosity_selfie.jpg'),),
     ),
     floatingActionButton: FloatingActionButton(
       onPressed: () {},

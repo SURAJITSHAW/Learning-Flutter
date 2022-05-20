@@ -45,3 +45,6 @@ Is gonna help us to create a basic layout for our application, it's gonna allow 
 
 
 > Hot Reload doesn't working with Auto Save option.
+
+# Images & Assets
+- Images from Internet: Image.network(url) or Image(image: NetworkImage(url))
