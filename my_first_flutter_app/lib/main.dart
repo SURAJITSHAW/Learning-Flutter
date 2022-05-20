@@ -6,5 +6,12 @@ void main() => runApp(MaterialApp(
       title: const Text('Surajits\'s App'),
       centerTitle: true,
     ),
+    body: const Center(
+       child: Text('Hello folks!')
+    ),
+    floatingActionButton: FloatingActionButton(
+      onPressed: () {},
+      child: const Text('click'),
+    ),
   ),
 ));
