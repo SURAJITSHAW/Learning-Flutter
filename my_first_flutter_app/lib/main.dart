@@ -18,16 +18,14 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
       body: Center(
-          child: TextButton(
-        onPressed: () {},
-        child: const Text('Click Me',
-        style: TextStyle(
-          fontSize: 30.0,
-        ),
-        ),
-        style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightBlue[500])),
-
-      )),
+          child: ElevatedButton.icon(
+            // ignore: avoid_print
+            onPressed: () => print('You clicked me'),
+            icon: const Icon(
+              Icons.mail,
+            ), label: const Text('mail me'),
+          )
+          ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: const Text('click'),
