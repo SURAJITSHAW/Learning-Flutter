@@ -20,7 +20,7 @@ class Home extends StatelessWidget {
       backgroundColor: Colors.red[600],
     ),
     body: const Center(
-      child: Image(image: NetworkImage('https://www.nasa.gov/sites/default/files/thumbnails/image/curiosity_selfie.jpg'),),
+      child: Image(image: AssetImage('assets/husky.jpg')),
     ),
     floatingActionButton: FloatingActionButton(
       onPressed: () {},

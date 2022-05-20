@@ -48,3 +48,4 @@ Is gonna help us to create a basic layout for our application, it's gonna allow 
 
 # Images & Assets
 - Images from Internet: Image.network(url) or Image(image: NetworkImage(url))
+- Downloaded Images: Image.asset() or Image(image: AssetImage(url)). But here had to do one extra step to add image containing folder to pubspec.yaml.
