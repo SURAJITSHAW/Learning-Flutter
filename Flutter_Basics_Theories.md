@@ -1,7 +1,14 @@
-##Widget
+###Widget
 Everything is basically a Widget in flutter and Widgets are basically Classes. The Layout we madde with flutter is represent as a Widget tree.
 
-#MaterialApp() Widget
+-Every Widget starts with a capital letter, and every individual word in it.
+-Every properteis should separate with a comma (very essential).
+
+##MaterialApp() Widget
 Is just a wrapper class, which provides a basic styling.
 
-#scaffold() Widget
+##Scaffold() Widget
+Is gonna help us to create a basic layout for our application, it's gonna allow us to set up a AppBar(), FloatingActionButton() and many more. 
+    #Widget? appBar:
+    It's just upper section of the main body part, just like the 'nav' section in the web app.
+    This appBar: propertie value is also a Widget itself (AppBar()).
