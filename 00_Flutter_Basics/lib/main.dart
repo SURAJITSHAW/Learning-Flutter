@@ -24,6 +24,35 @@ class _QouteListState extends State<QouteList> {
     Qoute(text: "I have nothing to declare except my genius", author: 'Oscar Wilde')
   ];
 
+  // this is a function which will return a Widget (Card) 
+  Widget qouteTemplate(qoute) {
+    return  Card(
+      margin: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+          Text(
+            qoute.text,
+            style: TextStyle(
+              fontSize: 18.0,
+              color: Colors.grey[600],
+            ),
+          ),
+          const SizedBox(height: 6.0,),
+          Text(
+            qoute.author,
+            style: TextStyle(
+              fontSize: 16.0,
+              color: Colors.grey[800],
+            ),
+          )
+        ],),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +65,7 @@ class _QouteListState extends State<QouteList> {
       ),
        /* -----------------------------------body: Column()------------------------------ */
       body: Column(
-        children: qoutes.map((qoute) => Text('${qoute.text} ~${qoute.author}')).toList(),
+        children: qoutes.map((qoute) => qouteTemplate(qoute)).toList(),
       ),
     );
   }
