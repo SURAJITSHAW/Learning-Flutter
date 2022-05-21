@@ -18,6 +18,8 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
       body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const Text('Hello World!'),
           ElevatedButton(onPressed: () {}, child: const Text('Click Me'), style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightBlue)),),

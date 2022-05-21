@@ -106,3 +106,13 @@ margin: const EdgeInsets.all(100.0),
         ],
       )
 '''
+
+- Horizontal Axis == Main Axis, Vertical Axis == Cross Axis. You can add space b/w `Widgets` inside the `Row()`.
+'''
+Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly, // .start is default
+        crossAxisAlignment: CrossAxisAlignment.start, // .center is default
+
+        children: <Widget>[]
+    )
+''' 
