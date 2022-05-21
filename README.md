@@ -125,3 +125,19 @@ Row(
 
 ## Shortcuts & Outline
 - Click on the Widget() have a little yellow light, click on it having multiple shortcut options to manipulate your Widgets()
+
+# Expanded Widgets
+- Creates a widget that expands a child of a [Row], [Column], or [Flex] so that the child fills the available space along the flex widget's main axis.
+    Row(
+        children: [
+          Expanded(
+            child: Container(
+              padding: const EdgeInsets.all(20.0),
+              child: const Text('One'),
+              color: Colors.cyan,
+            ),
+          ),
+        ]
+    )
+
+- With Expanded Widget we can specify the behaviour of child: Image Widget in our Layouts.
