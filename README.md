@@ -161,3 +161,11 @@ Row(
           gfCounts += 1;
         });
       },
+
+# Lists of Data
+- children  only accepts List, that's why with `.toList()` change this text iterable to a List.
+- qoutes.map() will return an Iterable. map() works exactly same as JS.
+
+    body: Column(
+        children: qoutes.map((qoute) => Text(qoute)).toList(),
+      ),
