@@ -51,6 +51,13 @@ Is gonna help us to create a basic layout for our application, it's gonna allow 
 - Downloaded Images: Image.asset() or Image(image: AssetImage(url)). But here had to do one extra step to add image containing folder to pubspec.yaml.
 
 # Buttons & Icons
+- 2 types of button: 
+    - ElevatedButton()
+    - TextButton()
+- Styling of Buttons: style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>. In the style: prop that has MaterialStateProprtty class.
+''' ElevatedButton(onPressed: () {}, child: const Text('Click Me'), style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightBlue)),
+'''
+
 '''
 child: Icon(
         Icons.airport_shuttle,
