@@ -141,3 +141,12 @@ Row(
     )
 
 - With Expanded Widget we can specify the behaviour of child: Image Widget in our Layouts.
+
+# SizedBox() Widget
+- Basically gonna create a empty box with height and width according to our needs. Props: height, width.
+
+# CircleAvatar()
+- Creates a circle that represents a user.
+
+# Divider
+- Creates a material design divider.
