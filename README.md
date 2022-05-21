@@ -58,3 +58,27 @@ child: Icon(
         size: 50.0,
       ),
 '''
+
+# Containers & Padding
+- Container() Widget is the most useful and easy to understand Widget provide by Flutter SDK. It also works like a wrapper class for layout Widgets and can also specify PADDING & MARGIN.
+- If any `child` isn't specified within container, it'll take the whole available area. 
+- If the child is present, it'll restrict itself to the child Widget.
+- You can add Padding by simply, add `padding:` inside Container() Widget.
+
+'''
+ Container(
+        padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0), // apply accordingly to horizontal & vertical value
+        Or, 
+        padding: const EdgeInsets.all(20.0), // apply the same value for all side
+        Or,
+        padding: const EdgeInsets.fromLTRB(10.0, 20.0, 30.0, 40.0), // left, top, rigtht, bottom
+
+        color: Colors.grey[400],
+        child: const Text('hello'),
+      )
+'''
+- Margin also works same as padding.
+'''
+margin: const EdgeInsets.all(100.0),
+'''
+- If you just want to add padding to value, can use Padding Widget itself (but you can't use margin, color or diff props)
