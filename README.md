@@ -116,3 +116,7 @@ Row(
         children: <Widget>[]
     )
 ''' 
+
+# Columns
+- Columns are same as Rows but the stack Widgets from top to bottom.
+- Also in Columns Main Axis is the Vertical one.
