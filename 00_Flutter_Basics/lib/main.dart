@@ -1,4 +1,7 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
+import 'qoute.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -15,10 +18,10 @@ class QouteList extends StatefulWidget {
 
 class _QouteListState extends State<QouteList> {
 
-  List<String> qoutes = [
-    "Be yourself; everone else is already taken",
-    "The truth is rarely pure and never simple",
-    "I have nothing to declare except my genius"
+  List qoutes = [
+    Qoute(text: "Be yourself; everone else is already taken", author: 'Oscar Wilde'),
+    Qoute(text: "The truth is rarely pure and never simple", author: 'Oscar Wilde'),
+    Qoute(text: "I have nothing to declare except my genius", author: 'Oscar Wilde')
   ];
 
   @override
@@ -33,7 +36,7 @@ class _QouteListState extends State<QouteList> {
       ),
        /* -----------------------------------body: Column()------------------------------ */
       body: Column(
-        children: qoutes.map((qoute) => Text(qoute)).toList(),
+        children: qoutes.map((qoute) => Text('${qoute.text} ~${qoute.author}')).toList(),
       ),
     );
   }

@@ -169,3 +169,4 @@ Row(
     body: Column(
         children: qoutes.map((qoute) => Text(qoute)).toList(),
       ),
+
