@@ -122,3 +122,6 @@ Row(
 - Also in Columns Main Axis is the Vertical one.
 
 > Can put Row() inside a Column() Widget and vice-verca.
+
+## Shortcuts & Outline
+- Click on the Widget() have a little yellow light, click on it having multiple shortcut options to manipulate your Widgets()
