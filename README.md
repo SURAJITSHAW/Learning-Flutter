@@ -82,3 +82,20 @@ child: Icon(
 margin: const EdgeInsets.all(100.0),
 '''
 - If you just want to add padding to value, can use Padding Widget itself (but you can't use margin, color or diff props)
+
+# Rows
+- So far we adding one Widget at a time on the `body:` of our app. Now with the help of Rows & Columns we can have multiple Widgets in our Layout at sametime.
+- Row() is a Widget which can contain several other Widgets inside it. Since we can have multiple Widgets inside id, instead of a `child:` prop Row() has a `chidren:` prop(which is essentially List of <Widgets>). Here Row containing 3 other Widgets inside it:
+'''
+ Row(
+        children: [
+          const Text('Hello World!'),
+          ElevatedButton(onPressed: () {}, child: const Text('Click Me'), style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightBlue)),),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 25.0),  
+            child: const Text('inside a container'),
+            color: Colors.amber,  
+          ),
+        ],
+      )
+'''
