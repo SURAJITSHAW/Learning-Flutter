@@ -15,7 +15,7 @@ class NinjaCard extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: const Text('Shaw ID Card'),
+        title: const Text('Otaku ID Card'),
         // Centering the title 
         centerTitle: true,
         backgroundColor: Colors.grey[850],
