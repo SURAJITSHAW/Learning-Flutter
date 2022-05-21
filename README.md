@@ -150,3 +150,14 @@ Row(
 
 # Divider
 - Creates a material design divider.
+
+# Stateful Widget
+- Here data can be changed over a time period. 
+- When working with Stateful Widgets, had to keep one thing mind you can't change the state directly. If you do the change will not gonna to reflect on Layout.
+- Had to put the changes logic/code inside setState funct (just like ReactJS).
+  
+  floatingActionButton: FloatingActionButton(onPressed: () {
+        setState(() {
+          gfCounts += 1;
+        });
+      },
