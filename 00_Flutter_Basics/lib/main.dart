@@ -38,7 +38,14 @@ class _QouteListState extends State<QouteList> {
       ),
        /* -----------------------------------body: Column()------------------------------ */
       body: Column(
-        children: qoutes.map((qoute) => QouteCard(qoute: qoute)).toList(),
+        children: qoutes.map((qoute) => QouteCard(
+          qoute: qoute,
+          delete: () {
+            setState(() {
+              qoutes.remove(qoute);
+            });
+          }
+        )).toList(),
       ),
     );
   }
