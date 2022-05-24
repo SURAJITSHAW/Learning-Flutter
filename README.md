@@ -229,3 +229,6 @@ Row(
       Future.delayed(const Duration(seconds: 3), () {}) 
 
 - This `.delayed()` method is a lot like `setTimeOut()` in JS, it'll wait take two arguments first for specified time to wait. Second one is a function runs after that specified time.  
+
+## async & await
+- Suppose in our code (funct) we have a asynchronous code, and we want them to runs synchronously/hirarchialy. For acheiving this goal we had to conver our code/funct asynchronous too, let know the flutter this is asynchronous code inside asynchronous funct. e.g. `void getData() async {...}` 
