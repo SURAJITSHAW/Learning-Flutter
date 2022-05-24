@@ -66,6 +66,7 @@ child: Icon(
       ),
 '''
 
+
 # Containers & Padding
 - Container() Widget is the most useful and easy to understand Widget provide by Flutter SDK. It also works like a wrapper class for layout Widgets and can also specify PADDING & MARGIN.
 - If any `child` isn't specified within container, it'll take the whole available area. 
@@ -170,3 +171,23 @@ Row(
         children: qoutes.map((qoute) => Text(qoute)).toList(),
       ),
 
+# SafeArea() 
+- Creates a widget that avoids operating system interfaces.
+# Maps & Routing
+- Maps are just key-value pair.
+- Use Map data structure for routing.
+
+    MaterialApp(
+    home: Home(), // set home: Home; also set default route '/' set to Loading. This will create conflicts b/w this two.
+    routes: {
+      '/': (context) => Loading(),
+      '/home':(context) => Home(),
+      '/location':(context) => Location(),
+
+    },
+  )
+
+- By default '/' is the first route that gonna fire when we opened our application. 'home:' prop also works exactly like same. So basically we give two Widgets (Home, Loading) fire at the same time, this will create a conflict.
+
+## Changing by default loading path
+- For our app Loading() is intial widget that gonna fire, but for testing purposes we want our default path change to Home(). For overwriting by default path we are gonna using `intialRoute: '/home',`.
