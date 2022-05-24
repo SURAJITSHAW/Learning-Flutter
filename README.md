@@ -203,3 +203,21 @@ Row(
 
 ## Changing by default loading path
 - For our app Loading() is intial widget that gonna fire, but for testing purposes we want our default path change to Home(). For overwriting by default path we are gonna using `intialRoute: '/home',`.
+
+# Widget Lifecycle    
+
+      Stateless  Widgets                |               Stateful Widgets
+                                        | 
+- Stae doesn't change over time.        | - State CAN change over time.
+- build funct runs once.                | - setState() triggers the build funct.
+                                        |
+
+## Lifecycle Methods / Stateful Widgets
+  1. `initState()`: 
+  - Called only once when the Widget is created.
+  - subscribe to stream or any object that could change our widget data.
+  2. `Build()`:
+  - Builds the widget tree
+  - A build trigger every time we use setState()
+  3. `Dispose()`:
+  - When the widget/state object is removed.
