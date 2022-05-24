@@ -232,3 +232,25 @@ Row(
 
 ## async & await
 - Suppose in our code (funct) we have a asynchronous code, and we want them to runs synchronously/hirarchialy. For acheiving this goal we had to conver our code/funct asynchronous too, let know the flutter this is asynchronous code inside asynchronous funct. e.g. `void getData() async {...}` 
+
+# Dart Packages
+- We can get acess to a tons pre-written packages at `pub.get` domain.
+- Then we had to specify that package under dependenies section (here specify the version of http pacak)
+
+    dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.13.4
+
+- Then we had to import the package at the top of the file we want to use the package.
+- Asynchronous funct which will make a api call, and return the data in Map type.
+
+    void getData() async {
+
+    // get the data from the api endpoint, await unit we get the data and store it into a response object of type Response.
+    Response response = await get(Uri.parse('https://jsonplaceholder.typicode.com/todos/1'));
+
+    // on that response object had a body prop, which is the actual json string we get from the api call, the decode that data to Map type to store in data variable to use it.
+    Map data = jsonDecode(response.body);
+    
+    }
