@@ -26,9 +26,12 @@ class _LoadingState extends State<Loading> {
     String offset_hours = offset.substring(1, 3);
     String offset_minutes = offset.substring(4);
 
+    var nowTime = data['datetime'];
+    print(nowTime.runtimeType);
+
     print(offset.substring(1, 3));
     print(offset.substring(4));
-    // print(data['datetime']);
+    // print(data['datetime']); Using datetime prop we don't had to do this crap of adding offset and all that.
     
     // Create a DateTime object
     DateTime now = DateTime.parse(dateTime);

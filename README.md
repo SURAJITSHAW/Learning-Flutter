@@ -254,3 +254,9 @@ Row(
     Map data = jsonDecode(response.body);
     
     }
+
+## DateTime
+- Is a class/data-type to store date time formatted string you get from any api calling to it, by assigning the formatted string to this you'll get proper representation of the date time to use it.
+
+    String dateTime = data['utc_datetime'];
+    DateTime now = DateTime.parse(dateTime);
