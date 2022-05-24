@@ -10,8 +10,14 @@ class Location extends StatefulWidget {
 class _LocationState extends State<Location> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(child: Text('Location Screen')),
+    return Scaffold(
+      // In appBar it automatically puts a back-arrow(<--) in it, if we come from a different screen
+      appBar: AppBar(
+        backgroundColor: Colors.grey,
+        title: const Text('Choose a Location'),
+        // Using `elevation` to cancel the drop shadow, and make the appBar 'flat' on the screen
+        elevation: 0.0,
+      ),
     );
   }
 }

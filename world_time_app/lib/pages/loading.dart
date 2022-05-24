@@ -10,8 +10,11 @@ class Loading extends StatefulWidget {
 class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(child: Text('Loading Screen')),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.grey,
+        title: const Text('Choose a Location'),
+      ),
     );
   }
 }

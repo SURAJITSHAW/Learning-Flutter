@@ -73,7 +73,7 @@ child: Icon(
               icon: const Icon(Icons.edit_location),
               label: const Text('Edit Location'))
 
-              
+
 # Containers & Padding
 - Container() Widget is the most useful and easy to understand Widget provide by Flutter SDK. It also works like a wrapper class for layout Widgets and can also specify PADDING & MARGIN.
 - If any `child` isn't specified within container, it'll take the whole available area. 
@@ -195,6 +195,11 @@ Row(
   )
 
 - By default '/' is the first route that gonna fire when we opened our application. 'home:' prop also works exactly like same. So basically we give two Widgets (Home, Loading) fire at the same time, this will create a conflict.
+
+## Navigtor
+- A widget that manages a set of child widgets with a stack discipline.
+- `Navigator.pushNamed(context, RouteName)` pushNamed() is just a funct which will take 2 arguments. This funct called pushNamed cause it essentially pushs the Route provided push on top of older route.
+
 
 ## Changing by default loading path
 - For our app Loading() is intial widget that gonna fire, but for testing purposes we want our default path change to Home(). For overwriting by default path we are gonna using `intialRoute: '/home',`.
