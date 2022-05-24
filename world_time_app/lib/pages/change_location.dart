@@ -9,6 +9,25 @@ class Location extends StatefulWidget {
 }
 
 class _LocationState extends State<Location> {
+
+  /// ***************************** Asynchronous Code START*************************************/ 
+  void getData() {
+
+    // simulate network request for a username
+    Future.delayed(const Duration(seconds: 0), () {
+      print('Surajit__Shaw');
+    });
+
+    // simulate network request for a user's bio
+    Future.delayed(const Duration(seconds: 3), () {
+      print('Bio: JS developer, Engineer');
+    });
+
+    print('Non-delayed statement!');
+
+  }
+/// ***************************** Asynchronous Code END*************************************/ 
+
   int count = 0;
 
   @override
@@ -16,6 +35,9 @@ class _LocationState extends State<Location> {
     super.initState();
     print(
         'initState() method runs'); // Now this print statement will be executed every tiime this Location Widget will be created
+
+    getData();
+    print('-----------Last statement from initState()-----------');
   }
 
   @override

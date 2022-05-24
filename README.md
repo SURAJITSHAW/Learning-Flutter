@@ -221,3 +221,11 @@ Row(
   - A build trigger every time we use setState()
   3. `Dispose()`:
   - When the widget/state object is removed.
+
+
+# Asynchronous Code
+- Creates a future that runs its computation after a delay. This `Future` Object is a lot like `Promises` in JavaScript.
+
+      Future.delayed(const Duration(seconds: 3), () {}) 
+
+- This `.delayed()` method is a lot like `setTimeOut()` in JS, it'll wait take two arguments first for specified time to wait. Second one is a function runs after that specified time.  
