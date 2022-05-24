@@ -11,21 +11,38 @@ class Loading extends StatefulWidget {
 
 class _LoadingState extends State<Loading> {
 
-  void getData() async {
+  void getTime() async {
 
     // get the data from the api endpoint, await unit we get the data and store it into a response object of type Response.
-    Response response = await get(Uri.parse('https://jsonplaceholder.typicode.com/todos/1'));
+    Response response = await get(Uri.parse('http://worldtimeapi.org/api/timezone/Asia/Kolkata'));
 
     // on that response object had a body prop, which is the actual json string we get from the api call, the decode that data to Map type to store in data variable to use it.
     Map data = jsonDecode(response.body);
     
+
+    // Get props from the data
+    String dateTime = data['utc_datetime'];
+    String offset = data['utc_offset'];
+    String offset_hours = offset.substring(1, 3);
+    String offset_minutes = offset.substring(4);
+
+    print(offset.substring(1, 3));
+    print(offset.substring(4));
+    // print(data['datetime']);
+    
+    // Create a DateTime object
+    DateTime now = DateTime.parse(dateTime);
+    now = now.add(Duration(hours: int.parse(offset_hours)));
+    now = now.add(Duration(minutes: int.parse(offset_minutes)));
+    print(now);
+
   }
 
   @override
   void initState() {
     super.initState();
 
-    getData();
+    getTime();
   }
 
   @override
