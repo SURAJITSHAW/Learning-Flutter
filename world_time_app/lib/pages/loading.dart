@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:world_time_app/services/world_time';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class Loading extends StatefulWidget {
   const Loading({Key? key}) : super(key: key);
@@ -15,11 +16,11 @@ class _LoadingState extends State<Loading> {
     await instance.getTime();
 
     // ignore: use_build_context_synchronously
-    Navigator.pushReplacementNamed(context, '/home', arguments: {
-      'location': instance.location,
-      'time': instance.time,
-      'flag': instance.flag
-    });
+    // Navigator.pushReplacementNamed(context, '/home', arguments: {
+    //   'location': instance.location,
+    //   'time': instance.time,
+    //   'flag': instance.flag
+    // });
 
   }
 
@@ -34,12 +35,12 @@ class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.grey,
-        title: const Text('Loading Screen'),
-      ),
+      backgroundColor: Colors.blue[900],
       body: const Center(
-        child: Text('Loading...'),
+        child: SpinKitSquareCircle(
+  color: Colors.white,
+  size: 90.0,
+),
       ),
     );
   }
