@@ -21,9 +21,21 @@ class WorldTime {
 
     // Conver that response(JSON String) to Map data type
     Map data = jsonDecode(response.body);
+    print(data);
     
+    String dataAsString = data['datetime'];
     // Assign the datetime prop value to DateTime class's object instance
-    DateTime now = DateTime.parse(data['datetime']);
+    // DateTime now = DateTime.parse(dataAsString);
+    // print(now);
+
+      String datetime = data['datetime'];
+      String offsetHours = data['utc_offset'].substring(1,3);
+      String offsetMins = data['utc_offset'].substring(4);
+
+      // create DateTime object
+      DateTime now = DateTime.parse(datetime);
+      now = now.add(Duration(hours: int.parse(offsetHours), minutes: int.parse(offsetMins)));
+      print(now);
 
     isDayTime = now.hour > 5 && now.hour < 18 ? true : false;
     time = DateFormat.jm().format(now);

@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
 
-    data = ModalRoute.of(context)!.settings.arguments as Map; // Getting the data passed by the loading route
+    data = data.isNotEmpty? data : ModalRoute.of(context)!.settings.arguments as Map; // Getting the data passed by the loading route
     print(data);
 
     // Set background image
@@ -36,8 +36,17 @@ class _HomeState extends State<Home> {
               child: Column(
         children: [
               TextButton.icon(
-                  onPressed: (() {
-                    Navigator.pushNamed(context, '/location');
+                  onPressed: (() async {
+                    dynamic result = await Navigator.pushNamed(context, '/location');
+
+                    setState(() {
+                      data = {
+                        'time': result['time'],
+                        'location': result['location'],
+                        'flag': result['flag'],
+                        'isDayTime': result['isDayTime'],
+                      };
+                    });
                   }),
                   icon: Icon(Icons.edit_location, color: Colors.grey[300],),
                   label: Text('Edit Location',  style: TextStyle(color: Colors.grey[300]),)),
