@@ -14,7 +14,8 @@ class WorldTime {
 
   Future<void> getTime() async {
 
-    // Make the Request
+    try {
+      // Make the Request
     Response response = await get(Uri.parse('http://worldtimeapi.org/api/timezone/$url'));
 
     // Conver that response(JSON String) to Map data type
@@ -24,6 +25,11 @@ class WorldTime {
     DateTime now = DateTime.parse(data['datetime']);
 
     time = now.toString();
+    }
+    catch (e) {
+      print('Error: $e');
+      time = 'Server Problem :(';
+    }
 
   }
 
