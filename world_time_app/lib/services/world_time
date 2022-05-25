@@ -1,6 +1,6 @@
-import 'package:http/http.dart';
 import 'dart:convert';
-import 'package:flutter/material.dart';
+import 'package:http/http.dart';
+import 'package:intl/intl.dart';
 
 class WorldTime {
 
@@ -24,7 +24,7 @@ class WorldTime {
     // Assign the datetime prop value to DateTime class's object instance
     DateTime now = DateTime.parse(data['datetime']);
 
-    time = now.toString();
+    time = DateFormat.jm().format(now);
     }
     catch (e) {
       print('Error: $e');
