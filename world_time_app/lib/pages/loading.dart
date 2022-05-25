@@ -10,15 +10,17 @@ class Loading extends StatefulWidget {
 
 class _LoadingState extends State<Loading> {
 
-  String time = 'Loading...';
-
   void setupWorldTime() async {
     WorldTime instance = WorldTime(flag: 'germany.png', location: 'Berlin', url: 'Europe/Berlin');
     await instance.getTime();
 
-    setState(() {
-      time = instance.time;
+    // ignore: use_build_context_synchronously
+    Navigator.pushReplacementNamed(context, '/home', arguments: {
+      'location': instance.location,
+      'time': instance.time,
+      'flag': instance.flag
     });
+
   }
 
 
@@ -36,8 +38,8 @@ class _LoadingState extends State<Loading> {
         backgroundColor: Colors.grey,
         title: const Text('Loading Screen'),
       ),
-      body: Center(
-        child: Text(time),
+      body: const Center(
+        child: Text('Loading...'),
       ),
     );
   }
