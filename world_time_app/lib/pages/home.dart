@@ -19,6 +19,9 @@ class _HomeState extends State<Home> {
     data = ModalRoute.of(context)!.settings.arguments as Map; // Getting the data passed by the loading route
     print(data);
 
+    // Set background image
+    String bg_img = dat['isDayTime'] ? 'day.jpg' : 'night.jpg';
+
     return Scaffold(
       body: SafeArea(
           child: Padding(
