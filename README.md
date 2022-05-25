@@ -260,3 +260,8 @@ Row(
 
     String dateTime = data['utc_datetime'];
     DateTime now = DateTime.parse(dateTime);
+
+## Future<void> getTime() async {}
+- If we want to use await infornt a custom asynchronous funct which returns void, isn't possible at all.
+- So had to use above syntax to acheieve our goal.
+- This is basically telling dart, funct will return Future temoriraly (it's just placeholder value, untill funct is completed). It'll return void when the funct is execute completely. 
